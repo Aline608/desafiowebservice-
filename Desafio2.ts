@@ -25,6 +25,8 @@ const usuarios = [
     { id: 1, nome: "Aline"},
     
     { id: 2, nome: "Maria" },
+
+    { id: 3, nome: "Karina" },
     
     ];
 
@@ -57,8 +59,6 @@ app.post("/usuarios", (req: Request, res: Response) => {
     
     nome: req.body.nome,
     
-    raca: req.body.raca,
-    
     };
     
     if (novoUsuario && novoUsuario.nome) {
@@ -74,5 +74,5 @@ app.post("/usuarios", (req: Request, res: Response) => {
 
 app.get('/saudacao/:nome', (req, res) => {
     const nome = req.params.nome;
-    res.json({ mensagem: `Olá, ${nome}! Seja bem-vindo ao servidor!` });
+    res.json({ mensagem: `Olá, ${nome}! Tudo bem? Seja bem-vindo ao servidor!` });
 });
